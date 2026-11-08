@@ -1,0 +1,25 @@
+
+CHURCH OF THE ARCHANGELS GEORGE <churchofthearcangels@gmail.com>
+7:18 PM (0 minutes ago)
+to me
+
+backend:
+  name: git-gateway
+  branch: main # or master, depending on your default GitHub branch
+
+media_folder: "images/uploads" # Where uploaded stock photos get saved
+public_folder: "/images/uploads"
+
+collections:
+  - name: "engines"
+    label: "Engine Stock"
+    folder: "_engines"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Car Brand", name: "brand", widget: "select", options: ["Toyota", "Nissan", "Mitsubishi", "Hyundai", "Kia", "Ford", "Volkswagen", "Audi", "Renault", "Honda", "MG", "Haval"]}
+      - {label: "Badge / Type", name: "badge", widget: "select", options: ["Tested Diesel", "Tested Petrol", "Gearbox / Transmission"]}
+      - {label: "Engine Specs / Notes", name: "specs", widget: "text"}
+      - {label: "Stock Photo", name: "image", widget: "image", required: false}
+      - {label: "WhatsApp Sales Line", name: "whatsapp", widget: "select", options: ["971563904736", "971562376005"], default: "971563904736"}
