@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Golden Diamond Corner | Engines & Gearboxes Dubai</title>
-    <meta name="description" content="Imported petrol and diesel engines and gearboxes in Dubai. Shop No. 8.">
+    <title>Golden Diamond Corner | Used Auto Parts Tr LLC Dubai</title>
+    <meta name="description" content="Import & supply of quality tested petrol and diesel engines and gearboxes in Dubai. Shop No. 8.">
+    <!-- Google Fonts & FontAwesome Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -38,7 +39,7 @@
         }
         .top-bar-contact a { color: var(--gold-accent); text-decoration: none; margin-left: 15px; font-weight: 600; }
 
-        /* Main Header */
+        /* Header Navigation */
         header {
             background-color: var(--primary-green);
             padding: 15px 5%;
@@ -63,30 +64,53 @@
         .btn-gold:hover { background-color: var(--gold-hover); }
         .btn-whatsapp { background-color: #25d366; color: var(--white); }
 
-        /* JEG Navigation Menu */
+        /* Navigation Menu */
         .main-nav {
             background-color: var(--white);
             border-bottom: 1px solid var(--border-color);
             box-shadow: 0 2px 5px rgba(0,0,0,0.03);
         }
         .main-nav ul {
-            list-style: none; display: flex; justify-content: center; gap: 10px;
+            list-style: none; display: flex; justify-content: center; gap: 15px;
             max-width: 1200px; margin: 0 auto;
         }
         .main-nav li a {
             display: block; padding: 14px 25px; color: var(--primary-green);
             font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 13px;
             text-decoration: none; text-transform: uppercase; border-bottom: 3px solid transparent;
-            transition: all 0.2s ease;
+            transition: all 0.2s ease; cursor: pointer;
         }
         .main-nav li a:hover, .main-nav li a.active {
             border-bottom-color: var(--gold-accent); color: var(--gold-hover); background: rgba(212, 175, 55, 0.05);
         }
 
-        /* Layout with Brand Sidebar & Main Content */
+        /* Hero Banner (Home Page Only) */
+        .hero {
+            background: linear-gradient(rgba(5, 46, 27, 0.88), rgba(10, 77, 46, 0.85)), url('https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+            color: var(--white);
+            padding: 60px 5%;
+            text-align: center;
+        }
+        .hero h2 { font-size: 36px; font-weight: 800; margin-bottom: 15px; color: var(--white); }
+        .hero h2 span { color: var(--gold-accent); }
+        .hero p { font-size: 16px; max-width: 750px; margin: 0 auto 25px auto; color: #e0e8e3; }
+        .hero-badges { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 25px; }
+        .badge { background: rgba(255, 255, 255, 0.1); border: 1px solid var(--gold-accent); padding: 6px 14px; border-radius: 20px; font-size: 12px; color: var(--gold-accent); font-weight: 600; }
+
+        /* Quick Stock Finder */
+        .quick-finder {
+            background: var(--white); max-width: 1000px; margin: -30px auto 40px auto; padding: 25px;
+            border-radius: 8px; box-shadow: 0 8px 25px rgba(0,0,0,0.08); border-top: 4px solid var(--gold-accent);
+            position: relative; z-index: 10;
+        }
+        .quick-finder h3 { color: var(--primary-green); margin-bottom: 15px; font-size: 18px; display: flex; align-items: center; gap: 10px; }
+        .form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+        .form-group input, .form-group select { width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 4px; font-size: 14px; outline: none; }
+
+        /* Layout with Sidebar & Content */
         .page-wrapper {
             max-width: 1200px; margin: 30px auto; padding: 0 20px;
-            display: grid; grid-template-columns: 260px 1fr; gap: 30px;
+            display: grid; grid-template-columns: 240px 1fr; gap: 30px;
         }
 
         /* Filter Sidebar */
@@ -95,16 +119,16 @@
             border: 1px solid var(--border-color); box-shadow: 0 2px 8px rgba(0,0,0,0.04);
             height: fit-content;
         }
-        .filter-sidebar h3 {
-            font-size: 16px; color: var(--primary-green); margin-bottom: 15px;
-            border-bottom: 2px solid var(--gold-accent); padding-bottom: 8px;
-        }
-        .brand-checklist { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-        .brand-checklist label { font-size: 14px; cursor: pointer; display: flex; align-items: center; gap: 10px; color: var(--text-dark); }
-        .brand-checklist input[type="checkbox"] { accent-color: var(--primary-green); width: 16px; height: 16px; }
+        .filter-sidebar h3 { font-size: 15px; color: var(--primary-green); margin-bottom: 12px; border-bottom: 2px solid var(--gold-accent); padding-bottom: 6px; }
+        .brand-checklist { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+        .brand-checklist label { font-size: 13px; cursor: pointer; display: flex; align-items: center; gap: 8px; color: var(--text-dark); }
+        .brand-checklist input[type="checkbox"] { accent-color: var(--primary-green); width: 15px; height: 15px; }
 
-        /* Catalog Section */
+        /* Card Views */
+        .view-section { display: none; }
+        .view-section.active-view { display: block; }
         .cat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+        
         .cat-card {
             background-color: var(--white); border-radius: 8px; overflow: hidden;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid var(--border-color);
@@ -125,7 +149,7 @@
             .top-bar { display: none; }
             header { flex-direction: column; gap: 12px; text-align: center; }
             .main-nav ul { flex-wrap: wrap; }
-            .main-nav li a { padding: 10px 15px; font-size: 12px; }
+            .main-nav li a { padding: 10px 12px; font-size: 12px; }
         }
     </style>
 </head>
@@ -159,16 +183,61 @@
         </div>
     </header>
 
-    <!-- JEG Navigation Menu (Engines & Gearboxes Focus) -->
+    <!-- Main Navigation Bar -->
     <nav class="main-nav">
         <ul>
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#engines">Engines</a></li>
-            <li><a href="#gearboxes">Gearboxes</a></li>
+            <li><a onclick="showTab('home')" id="nav-home" class="active">Home</a></li>
+            <li><a onclick="showTab('engines')" id="nav-engines">Engines</a></li>
+            <li><a onclick="showTab('gearboxes')" id="nav-gearboxes">Gearboxes</a></li>
         </ul>
     </nav>
 
-    <!-- Main Content Area -->
+    <!-- HOME SECTION (Hero Banner + Quick Stock Finder) -->
+    <div id="home-view" class="view-section active-view">
+        <section class="hero">
+            <h2>Quality Tested <span>Petrol & Diesel</span> Engines & Gearboxes</h2>
+            <p>Dubai’s trusted supplier of high-performance imported complete engines and transmissions for all major car brands.</p>
+            <div class="hero-badges">
+                <span class="badge"><i class="fa-solid fa-circle-check"></i> Compression Tested</span>
+                <span class="badge"><i class="fa-solid fa-truck-fast"></i> UAE & Export Dispatch</span>
+                <span class="badge"><i class="fa-solid fa-warehouse"></i> Direct Importers</span>
+            </div>
+        </section>
+
+        <div class="quick-finder">
+            <h3><i class="fa-solid fa-magnifying-glass"></i> Request Price Quote</h3>
+            <form onsubmit="sendInquiry(event)">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <select id="homeMake" required>
+                            <option value="">Select Make</option>
+                            <option value="Toyota">Toyota</option><option value="Nissan">Nissan</option><option value="Mitsubishi">Mitsubishi</option>
+                            <option value="Hyundai">Hyundai</option><option value="Kia">Kia</option><option value="MG">MG</option>
+                            <option value="Haval">Haval</option><option value="Ford">Ford</option><option value="Renault">Renault</option>
+                            <option value="Honda">Honda</option><option value="Volkswagen">Volkswagen</option><option value="Audi">Audi</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="homeModel" placeholder="Model / Engine Code" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="homeCategory" required>
+                            <option value="">Category</option>
+                            <option value="Engine">Engine</option>
+                            <option value="Gearbox">Gearbox</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-gold" style="width: 100%; justify-content: center; height: 100%;">
+                            <i class="fa-solid fa-paper-plane"></i> Send Inquiry
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- MAIN PAGE WRAPPER (Catalog Views) -->
     <div class="page-wrapper">
 
         <!-- Sidebar: Filter by Brand -->
@@ -190,47 +259,128 @@
             </ul>
         </aside>
 
-        <!-- Main Product Grid (Engines & Gearboxes Only) -->
-        <main class="cat-grid">
-            
-            <!-- Engines Category Card -->
-            <div class="cat-card" id="engines">
-                <div class="cat-header">
-                    <h3>Petrol & Diesel Engines</h3>
-                    <i class="fa-solid fa-engine"></i>
-                </div>
-                <div class="cat-body">
-                    <ul>
-                        <li><i class="fa-solid fa-check"></i> Complete Imported Assemblies</li>
-                        <li><i class="fa-solid fa-check"></i> Low Mileage Units</li>
-                        <li><i class="fa-solid fa-check"></i> Compression & Startup Tested</li>
-                        <li><i class="fa-solid fa-check"></i> Japanese, European & Chinese Brands</li>
-                    </ul>
-                    <a href="https://wa.me/971563904736?text=Hi,%20I%20am%20inquiring%20about%20an%20Engine%20stock%20availability" class="btn btn-gold" style="width:100%; justify-content:center;" target="_blank">Inquire Engine Stock</a>
+        <!-- Dynamic Content Area -->
+        <main>
+            <!-- HOME CATALOG VIEW (Shows both Cards) -->
+            <div id="home-catalog" class="view-section active-view">
+                <div class="cat-grid">
+                    <div class="cat-card">
+                        <div class="cat-header">
+                            <h3>Petrol & Diesel Engines</h3>
+                            <i class="fa-solid fa-engine"></i>
+                        </div>
+                        <div class="cat-body">
+                            <ul>
+                                <li><i class="fa-solid fa-check"></i> Complete Imported Assemblies</li>
+                                <li><i class="fa-solid fa-check"></i> Compression & Startup Tested</li>
+                                <li><i class="fa-solid fa-check"></i> Low Mileage Stock</li>
+                            </ul>
+                            <a href="https://wa.me/971563904736?text=Hi,%20I%20am%20inquiring%20about%20Engine%20stock" class="btn btn-gold" style="width:100%; justify-content:center;" target="_blank">Inquire Engine Stock</a>
+                        </div>
+                    </div>
+
+                    <div class="cat-card">
+                        <div class="cat-header">
+                            <h3>Gearboxes & Transmissions</h3>
+                            <i class="fa-solid fa-gear"></i>
+                        </div>
+                        <div class="cat-body">
+                            <ul>
+                                <li><i class="fa-solid fa-check"></i> Automatic & Manual Transmissions</li>
+                                <li><i class="fa-solid fa-check"></i> 4x4 Transfer Cases</li>
+                                <li><i class="fa-solid fa-check"></i> Inspected & Ready for Fitment</li>
+                            </ul>
+                            <a href="https://wa.me/971562376005?text=Hi,%20I%20am%20inquiring%20about%20Gearbox%20stock" class="btn btn-gold" style="width:100%; justify-content:center;" target="_blank">Inquire Gearbox Stock</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Gearboxes Category Card -->
-            <div class="cat-card" id="gearboxes">
-                <div class="cat-header">
-                    <h3>Gearboxes & Transmissions</h3>
-                    <i class="fa-solid fa-gear"></i>
+            <!-- ENGINES DEDICATED VIEW -->
+            <div id="engines-catalog" class="view-section">
+                <h2 style="margin-bottom: 15px; color: var(--primary-green);">Engines Catalog</h2>
+                <div class="cat-grid">
+                    <div class="cat-card">
+                        <div class="cat-header">
+                            <h3>Complete Engines Catalog</h3>
+                            <i class="fa-solid fa-engine"></i>
+                        </div>
+                        <div class="cat-body">
+                            <ul>
+                                <li><i class="fa-solid fa-check"></i> Toyota 1KD / 2KD / 2TR</li>
+                                <li><i class="fa-solid fa-check"></i> VW / Audi 1.4 TSI & 2.0 TDI</li>
+                                <li><i class="fa-solid fa-check"></i> Hyundai G4LA / D4EA</li>
+                                <li><i class="fa-solid fa-check"></i> Haval & MG Turbo Petrol Units</li>
+                            </ul>
+                            <a href="https://wa.me/971563904736?text=Hi,%20I%20am%20inquiring%20about%20Engine%20stock" class="btn btn-gold" style="width:100%; justify-content:center;" target="_blank">Inquire Engine Quote</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="cat-body">
-                    <ul>
-                        <li><i class="fa-solid fa-check"></i> Automatic & Manual Gearboxes</li>
-                        <li><i class="fa-solid fa-check"></i> 4x4 Transfer Cases</li>
-                        <li><i class="fa-solid fa-check"></i> Inspected & Verified Units</li>
-                        <li><i class="fa-solid fa-check"></i> Direct Fitment Ready</li>
-                    </ul>
-                    <a href="https://wa.me/971562376005?text=Hi,%20I%20am%20inquiring%20about%20a%20Gearbox%20stock%20availability" class="btn btn-gold" style="width:100%; justify-content:center;" target="_blank">Inquire Gearbox Stock</a>
+            </div>
+
+            <!-- GEARBOXES DEDICATED VIEW -->
+            <div id="gearboxes-catalog" class="view-section">
+                <h2 style="margin-bottom: 15px; color: var(--primary-green);">Gearboxes Catalog</h2>
+                <div class="cat-grid">
+                    <div class="cat-card">
+                        <div class="cat-header">
+                            <h3>Transmissions Catalog</h3>
+                            <i class="fa-solid fa-gear"></i>
+                        </div>
+                        <div class="cat-body">
+                            <ul>
+                                <li><i class="fa-solid fa-check"></i> Automatic & Manual Gearboxes</li>
+                                <li><i class="fa-solid fa-check"></i> 4x4 Transfer Cases & Differentials</li>
+                                <li><i class="fa-solid fa-check"></i> Tested Torque Converters</li>
+                            </ul>
+                            <a href="https://wa.me/971562376005?text=Hi,%20I%20am%20inquiring%20about%20Gearbox%20stock" class="btn btn-gold" style="width:100%; justify-content:center;" target="_blank">Inquire Gearbox Quote</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
         </main>
     </div>
 
+    <!-- JavaScript Navigation Tab Controller -->
+    <script>
+        function showTab(tabName) {
+            // Update Navigation Menu Active State
+            document.querySelectorAll('.main-nav a').forEach(a => a.classList.remove('active'));
+            document.getElementById('nav-' + tabName).classList.add('active');
+
+            // Toggle Home Hero Section
+            const homeHero = document.getElementById('home-view');
+            if (tabName === 'home') {
+                homeHero.classList.add('active-view');
+            } else {
+                homeHero.classList.remove('active-view');
+            }
+
+            // Hide all Catalog Views
+            document.getElementById('home-catalog').classList.remove('active-view');
+            document.getElementById('engines-catalog').classList.remove('active-view');
+            document.getElementById('gearboxes-catalog').classList.remove('active-view');
+
+            // Show selected View
+            if (tabName === 'home') {
+                document.getElementById('home-catalog').classList.add('active-view');
+            } else if (tabName === 'engines') {
+                document.getElementById('engines-catalog').classList.add('active-view');
+            } else if (tabName === 'gearboxes') {
+                document.getElementById('gearboxes-catalog').classList.add('active-view');
+            }
+        }
+
+        function sendInquiry(e) {
+            e.preventDefault();
+            const make = document.getElementById('homeMake').value;
+            const model = document.getElementById('homeModel').value;
+            const cat = document.getElementById('homeCategory').value;
+            const msg = `Hi Golden Diamond Corner, I am looking for a quote:%0A- Make: ${make}%0A- Model: ${model}%0A- Category: ${cat}`;
+            window.open(`https://wa.me/971563904736?text=${msg}`, '_blank');
+        }
+    </script>
 </body>
 </html>
-
 
