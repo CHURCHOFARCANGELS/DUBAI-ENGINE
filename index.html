@@ -1,334 +1,198 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Golden Diamond Corner | Used Auto Parts Tr LLC Dubai</title>
-    <meta name="description" content="Imported engines, gearboxes, new & used auto parts, and vehicles for stripping in Dubai.">
-    <!-- Google Fonts & FontAwesome -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Golden Diamond Corner | Used Auto Parts Tr LLC Dubai</title>
+<meta name="description" content="Imported engines, gearboxes, and used auto parts in Dubai.">
+<!-- Font Icons for social and navigation -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+/* 1. BRAND COLORS - EXACT GREEN & GOLD FROM YOUR IMAGE */
+:root {
+--green: #07593B; /* Logo Background */
+--green-dark: #043825; /* Text Contrast and borders */
+--gold: #BB9D71; /* Metallic Gold Accent */
+--gold-dark: #A58B64; /* Text Contrast / Hover */
+--white: #ffffff;
+--light: #f3f7f5; /* Page Background */
+}
 
-    <style>
-        /* UPDATED COLOR PALETTE FROM LOGO IMAGE */
-        :root {
-            /* The specific rich green from the logo background */
-            --primary-green: #085a3a; 
-            /* A slightly darker variation for depth */
-            --dark-green: #054029;
-            /* The specific metallic gold color from the emblem */
-            --gold-accent: #c4a77d; 
-            /* A warmer gold for hover effects */
-            --gold-hover: #b39366;
-            /* Neutrals */
-            --light-bg: #f2f6f4;
-            --card-bg: #ffffff;
-            --text-dark: #1f2923;
-            --text-muted: #5e6d64;
-            --border-light: #e1e8e3;
-        }
+/* 2. BASE STYLES */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+font-family: Arial, sans-serif;
+line-height: 1.6;
+background: var(--light);
+color: #333;
+}
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Roboto', sans-serif;
-        }
+/* 3. UTILITY CLASSES (Matching Button Styles) */
+.btn {
+display: inline-flex; align-items: center; gap: 8px;
+padding: 10px 20px; text-decoration: none; font-weight: bold; font-size: 13px;
+text-transform: uppercase; border-radius: 4px; border: none;
+transition: 0.2s;
+}
+.btn-gold { background: var(--gold); color: var(--green-dark); }
+.btn-gold:hover { background: var(--gold-dark); }
+.btn-whatsapp { background: #25d366; color: var(--white); }
+.btn-whatsapp:hover { background: #1ebd57; }
 
-        h1, h2, h3, h4, .font-heading {
-            font-family: 'Montserrat', sans-serif;
-        }
+/* 4. LAYOUT SECTIONS */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+section { padding: 50px 0; }
 
-        body {
-            background-color: var(--light-bg);
-            color: var(--text-dark);
-        }
+/* Header & Nav */
+header {
+background: var(--green);
+color: var(--gold);
+border-bottom: 2px solid var(--gold);
+position: sticky; top: 0; z-index: 1000;
+}
+.header-wrapper {
+display: flex; justify-content: space-between; align-items: center;
+padding: 10px 20px;
+}
+.brand { display: flex; align-items: center; gap: 10px; }
+.logo { font-size: 32px; color: var(--gold); }
+.brand-text h1 { font-size: 18px; color: var(--gold); }
+.brand-text span { font-size: 11px; color: var(--white); text-transform: uppercase; letter-spacing: 1px; }
 
-        /* 1. TOP UTILITY BAR */
-        .top-nav {
-            background-color: var(--dark-green);
-            color: #ffffff;
-            padding: 8px 6%;
-            font-size: 13px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 2px solid var(--gold-accent);
-        }
+/* Navigation & JEG Auto Architecture */
+nav { background: var(--white); border-bottom: 1px solid #ddd; }
+nav ul {
+list-style: none; display: flex; justify-content: center;
+max-width: 1000px; margin: 0 auto;
+}
+nav a {
+display: block; padding: 15px 20px;
+text-decoration: none; color: var(--green); font-weight: bold; font-size: 14px;
+border-bottom: 3px solid transparent; transition: 0.2s;
+}
+nav a:hover, nav a.active { border-color: var(--gold); color: var(--gold-dark); }
 
-        .top-nav a {
-            color: var(--gold-accent);
-            text-decoration: none;
-            font-weight: 600;
-        }
+/* Hero Banner */
+.hero {
+background: linear-gradient(rgba(7, 89, 59, 0.9), rgba(7, 89, 59, 0.95)), url('https://images.unsplash.com/photo-1486006920555-c77dce18193b?q=80&w=1600') center/cover;
+color: var(--white); text-align: center; padding: 80px 0;
+}
+.hero h2 { font-size: 32px; color: var(--gold); margin-bottom: 15px; }
+.hero h2 span { color: var(--white); }
 
-        /* 2. MAIN HEADER & LOGO AREA (UPDATED) */
-        header {
-            background-color: var(--primary-green);
-            padding: 10px 6%; /* Reduced padding for logo space */
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-        }
+/* Fast Stock Finder (Filter Bar) */
+.filter-bar {
+background: var(--white); max-width: 1100px; margin: -40px auto 40px;
+padding: 25px; border-radius: 6px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+border-top: 3px solid var(--gold);
+}
+.filter-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+.filter-grid select, .filter-grid input {
+width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 14px;
+}
 
-        .brand-container {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            text-decoration: none; /* In case we wrap it in an anchor later */
-        }
+/* Product Cards */
+.catalog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+.card {
+background: var(--white); border: 1px solid #ddd; border-radius: 6px;
+transition: 0.2s; display: flex; flex-direction: column; overflow: hidden;
+}
+.card:hover { border-color: var(--gold); box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+.card-badge {
+background: var(--green); color: var(--gold); font-size: 11px;
+font-weight: bold; text-transform: uppercase; padding: 5px 10px;
+align-self: flex-start; margin: 15px; border-radius: 3px;
+}
+.card-body { padding: 15px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;}
+.card-title { font-weight: bold; font-size: 15px; margin-bottom: 10px; color: #333;}
+.card-specs { font-size: 13px; color: #666; margin-bottom: 15px; }
+.card-body .btn { width: 100%; justify-content: center; }
 
-        /* LOGO IMAGE STYLING */
-        .brand-logo-img {
-            height: 60px; /* Adjust height as needed */
-            width: auto;
-            display: block;
-        }
+/* Footer Workshop/Yard */
+.footer-contact { background: var(--green-dark); color: var(--white); }
+.footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.footer-text h3 { color: var(--gold); margin-bottom: 15px; }
+.footer-text p { margin-bottom: 10px; font-size: 14px; display: flex; align-items: center; gap: 8px; color: #ddd; }
+.footer-text i { color: var(--gold); }
+iframe { border-radius: 6px; border: 2px solid var(--gold); }
 
-        /* FALLBACK ICON (Hidden if image loads) */
-        .brand-icon {
-            font-size: 34px;
-            color: var(--gold-accent);
-            display: none; /* Hide standard icon */
-        }
+/* Mobile Adaptations */
+@media (max-width: 768px) {
+.header-wrapper { flex-direction: column; gap: 10px; }
+nav ul { flex-wrap: wrap; }
+nav a { padding: 10px 15px; font-size: 12px; }
+.hero h2 { font-size: 24px; }
+.footer-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
 
-        /* Text branding remains for SEO and fallback, styled in gold */
-        .brand-text h1 {
-            color: var(--gold-accent);
-            font-size: 20px;
-            font-weight: 800;
-            line-height: 1.1;
-            letter-spacing: 0.5px;
-        }
+<!-- 1. HEADER (JEG Auto Architecture + Logo Space) -->
+<header>
+<div class="header-wrapper container">
+<div class="brand">
+<!-- Standard Icon: Falling Back to Font Awesome -->
+<i class="fa-solid fa-gear logo"></i>
+<!-- Logo Image Placement (Hidden until image is uploaded) -->
+<!-- <img src="logo.png" alt="Golden Diamond Corner" style="height: 50px;"> -->
+<div class="brand-text">
+<h1>GOLDEN DIAMOND CORNER</h1>
+<span>Used Auto Parts Tr LLC Dubai</span>
+</div>
+</div>
+<div class="brand-actions">
+<a href="https://wa.me/971563904736?text=Hi,%20I%20am%20looking%20for%20an%20engine/gearbox" class="btn btn-whatsapp" target="_blank">
+<i class="fa-brands fa-whatsapp"></i> Chat Sales 1
+</a>
+<a href="https://wa.me/971562376005?text=Hi,%20I%20am%20looking%20for%20an%20engine/gearbox" class="btn btn-gold" target="_blank">
+<i class="fa-brands fa-whatsapp"></i> Chat Sales 2
+</a>
+</div>
+</div>
+</header>
 
-        .brand-text span {
-            color: #ffffff; /* White subheading for contrast */
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-        }
+<!-- 2. NAVIGATION (Matching 5-Column Core Navigation) -->
+<nav>
+<ul>
+<li><a href="#engines" class="active"><i class="fa-solid fa-engine"></i> Engines</a></li>
+<li><a href="#gearboxes"><i class="fa-solid fa-gear"></i> Gearboxes</a></li>
+<li><a href="#new-parts"><i class="fa-solid fa-box-open"></i> New Parts</a></li>
+<li><a href="#used-parts"><i class="fa-solid fa-wrench"></i> Used Parts</a></li>
+<li><a href="#stripping"><i class="fa-solid fa-car-burst"></i> Stripping</a></li>
+</ul>
+</nav>
 
-        .header-actions {
-            display: flex;
-            gap: 12px;
-        }
+<!-- 3. HERO BANNER -->
+<section class="hero">
+<div class="container">
+<h2>Quality Tested <span>Petrol & Diesel</span> Engines</h2>
+<p>Trusted supplier of imported, low-mileage complete engines and transmissions for all major brands.</p>
+</div>
+</section>
 
-        /* Button styling updated to match new gold */
-        .btn {
-            padding: 10px 18px;
-            border-radius: 4px;
-            font-weight: 700;
-            font-size: 13px;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.2s ease;
-            cursor: pointer;
-            border: none;
-            text-transform: uppercase;
-        }
+<!-- 4. STOCK FINDER BAR -->
+<div class="filter-bar container">
+<form id="stockFinder" onsubmit="sendInquiry(event)">
+<div class="filter-grid">
+<select id="brandSelect" required>
+<option value="">Select Brand</option>
+<option value="Toyota">Toyota</option><option value="Nissan">Nissan</option><option value="Volkswagen">VW/Audi</option>
+<option value="Hyundai">Hyundai/Kia</option><option value="Ford">Ford</option><option value="Mitsubishi">Mitsubishi</option>
+</select>
+<select id="categorySelect" required>
+<option value="">Category</option>
+<option value="Complete Engine">Engines</option><option value="Gearbox">Gearboxes</option>
+<option value="New Component">New Parts</option><option value="Used Component">Used Parts</option>
+</select>
+<input type="text" id="modelInput" placeholder="Model / VIN / Engine Code" required>
+<button type="submit" class="btn btn-gold" style="justify-content: center; width: 100%;">
+<i class="fa-solid fa-paper-plane"></i> Send Inquiry
+</button>
+</div>
+</form>
+</div>
 
-        .btn-gold {
-            background-color: var(--gold-accent);
-            color: var(--dark-green); /* Contrast text */
-        }
+<!-- 5. CORE CATALOG (SAMPLE ENGINES) -->
+<section class
 
-        .btn-gold:hover {
-            background-color: var(--gold-hover);
-        }
-
-        .btn-whatsapp {
-            background-color: #25d366; /* Standard WhatsApp Green */
-            color: #ffffff;
-        }
-
-        .btn-whatsapp:hover {
-            background-color: #1ebc57;
-        }
-
-        /* 3. CATEGORY NAVIGATION BAR */
-        .cat-nav-bar {
-            background-color: #ffffff;
-            border-bottom: 1px solid var(--border-light);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
-        }
-
-        .cat-nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-around;
-            list-style: none;
-        }
-
-        .cat-nav-container li a {
-            display: block;
-            padding: 15px 20px;
-            color: var(--primary-green);
-            font-weight: 700;
-            font-size: 14px;
-            text-decoration: none;
-            border-bottom: 3px solid transparent;
-            transition: all 0.2s ease;
-        }
-
-        .cat-nav-container li a:hover, .cat-nav-container li a.active {
-            border-bottom-color: var(--gold-accent);
-            color: var(--gold-hover);
-            background-color: rgba(196, 167, 125, 0.08); /* Transparent Gold bg */
-        }
-
-        /* 4. HERO SECTION */
-        .hero {
-            /* Using the dark green from the logo for the overlay */
-            background: linear-gradient(rgba(5, 64, 41, 0.9), rgba(8, 90, 58, 0.85)), url('https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=1600&q=80') center/cover;
-            color: #ffffff;
-            padding: 60px 6% 80px 6%;
-            text-align: center;
-        }
-
-        .hero h2 {
-            font-size: 36px;
-            font-weight: 800;
-            margin-bottom: 15px;
-        }
-
-        .hero h2 span {
-            color: var(--gold-accent);
-        }
-
-        .hero p {
-            font-size: 16px;
-            max-width: 800px;
-            margin: 0 auto 25px auto;
-            color: #dce5df;
-        }
-
-        /* 5. SEARCH & INQUIRY BAR */
-        .search-container {
-            max-width: 1100px;
-            margin: -40px auto 40px auto;
-            background: #ffffff;
-            padding: 25px;
-            border-radius: 6px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-            border-top: 4px solid var(--gold-accent);
-        }
-
-        .search-title {
-            font-size: 16px;
-            font-weight: 700;
-            color: var(--primary-green);
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .search-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 12px;
-        }
-
-        .search-grid select, .search-grid input {
-            width: 100%;
-            padding: 11px;
-            border: 1px solid var(--border-light);
-            border-radius: 4px;
-            font-size: 14px;
-            outline: none;
-        }
-
-        /* 6. PRODUCTS & CATEGORY SECTIONS */
-        .main-section {
-            max-width: 1200px;
-            margin: 0 auto 50px auto;
-            padding: 0 20px;
-        }
-
-        .section-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 25px;
-            border-bottom: 2px solid var(--border-light);
-            padding-bottom: 10px;
-        }
-
-        .section-header h3 {
-            font-size: 22px;
-            color: var(--primary-green);
-            position: relative;
-        }
-
-        .section-header h3::after {
-            content: '';
-            position: absolute;
-            bottom: -12px;
-            left: 0;
-            width: 50px;
-            height: 3px;
-            background-color: var(--gold-accent);
-        }
-
-        /* Product Grid Layout */
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 20px;
-        }
-
-        .product-card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-light);
-            border-radius: 6px;
-            overflow: hidden;
-            transition: all 0.2s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .product-card:hover {
-            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-            border-color: var(--gold-accent);
-        }
-
-        /* Badge uses primary green with gold text */
-        .product-badge {
-            background-color: var(--primary-green);
-            color: var(--gold-accent);
-            font-size: 11px;
-            font-weight: 700;
-            padding: 4px 10px;
-            text-transform: uppercase;
-            align-self: flex-start;
-            margin: 15px 15px 0 15px;
-            border-radius: 3px;
-        }
-
-        .product-info {
-            padding: 15px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .product-title {
-            font-size: 15px;
-            font-weight: 700;
-            color: var(--text-dark);
-            margin-bottom: 8px;
-        }
-
-        .product-specs {
-            font-size: 13px;
-            color: var(--text-muted);
-            margin-bottom: 15px
